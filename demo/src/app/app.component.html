@@ -1,16 +1,4 @@
-<!-- Interpolation -->
-{{ title }}
-<!-- <h1 [id]="title" [ngClass]="{ active: active, italic: italic }" >{{ title }}</h1> -->
-<h1 [id]="title" [ngStyle]="{ color: color }" >{{ title }}</h1>
-<button (click)="active = !active; italic = !italic">Active: {{ active }}</button>
-<button (click)="url = urls[1]">Url: {{ url }}</button>
-<!-- <img *ngIf="active" [attr.src]="url" alt=""> -->
-
-
-<img *ngFor="let item of urls" [src]="item" alt="">
-
-
-
+<app-header></app-header>
 
 
 
