@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  providers: [ ProductService ]
 })
 export class HeaderComponent {
 
@@ -46,13 +48,26 @@ export class HeaderComponent {
 
   nav = [];
 
-  constructor() {
+  count = null;
+
+  constructor( private productService: ProductService ) {
     this.nav = this.notLoginLinks;
+    this.count = productService.count;
   }
+
+  getCount(){
+    this.count = this.productService.count;
+ }
+
+ setCount( event ) {
+   this.productService.count = event.target.value;
+ }
 
   login( ) {
     this.nav = this.loginLinks;
   }
+
+  
 }
 
 
