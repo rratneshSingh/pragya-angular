@@ -11,14 +11,5 @@ export class FooterComponent {
   count = null;
 
   constructor( private productService: ProductService ) {
-   this.count = productService.count;
-  }
-
-  getCount(){
-     this.count = this.productService.count;
-  }
-
-  setCount( event ) {
-    this.productService.count = event.target.value;
   }
 }

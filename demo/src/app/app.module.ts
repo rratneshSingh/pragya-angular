@@ -8,7 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HelperModule } from './modules/helper/helper.module';
 import { ProductService } from './services/product.service';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { ProductService } from './services/product.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HelperModule
+    HelperModule,
+    HttpClientModule
   ],
   providers: [ ProductService ],
   bootstrap: [AppComponent]

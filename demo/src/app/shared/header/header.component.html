@@ -1,8 +1,5 @@
 <div class="header">
     <ul class="header_list">
         <li class="list_item" *ngFor="let item of nav" (click)="item.actionFunc()">{{ item.title }}</li>
-        <li><button (click)="getCount()">Get Count</button></li>
-        <li><input type="number" (input)="setCount( $event )"></li>
-        <li>{{ count }}</li>
     </ul>
 </div>

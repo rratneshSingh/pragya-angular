@@ -1,10 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductService {
 
-  count = 10;
+  constructor( private httpClient: HttpClient ) { }
 
-  constructor() { }
-
+  getProducts() {
+    return this.httpClient.get( 'https://fakestoreapi.com/products' );
+  }
 }
