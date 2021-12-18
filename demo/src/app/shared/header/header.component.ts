@@ -11,7 +11,8 @@ export class HeaderComponent {
   loginLinks: NavLink[] = [
     {
       title: 'Home',
-      actionFunc: () => {}
+      actionFunc: () => {},
+      url: ''
     },
     {
       title: 'Profile',
@@ -29,7 +30,8 @@ export class HeaderComponent {
   notLoginLinks: NavLink[] = [
     {
       title: 'Home',
-      actionFunc: () => {}
+      actionFunc: () => {},
+      url: '/home'
     },
     {
       title: 'Login',
@@ -41,7 +43,8 @@ export class HeaderComponent {
     },
     {
       title: 'About Us',
-      actionFunc: () => {}
+      actionFunc: () => {},
+      url: '/about'
     }
   ];
 
@@ -62,5 +65,6 @@ export class HeaderComponent {
 
 class NavLink {
   title: string;
-  actionFunc: Function
+  actionFunc: Function;
+  url?: string
 }

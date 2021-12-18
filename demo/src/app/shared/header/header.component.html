@@ -1,5 +1,5 @@
 <div class="header">
     <ul class="header_list">
-        <li class="list_item" *ngFor="let item of nav" (click)="item.actionFunc()">{{ item.title }}</li>
+        <li class="list_item" *ngFor="let item of nav" [routerLink]="item.url" (click)="item.actionFunc()">{{ item.title }}</li>
     </ul>
 </div>

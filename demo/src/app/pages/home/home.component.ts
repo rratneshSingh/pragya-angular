@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   constructor( private productService: ProductService ) {
     productService.getProducts().subscribe( ( result: any[] ) => {
-      this.products = result;
+      this.products = result.slice( 0, 4 );
     } );
   }
 
